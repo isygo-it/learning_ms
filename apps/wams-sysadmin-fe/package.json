@@ -1,0 +1,31 @@
+{
+  "name": "Novobit-SYSADMIN",
+  "version": "1.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "set NEXT_PUBLIC_PROFILE=dev-local&& next dev -p 4001",
+    "build:docker-dev": "set NEXT_PUBLIC_PROFILE=docker-dev&& next build",
+    "build:docker-prod": "set NEXT_PUBLIC_PROFILE=docker-prod&& next build",
+    "build:docker-qa": "set NEXT_PUBLIC_PROFILE=docker-qa&& next build",
+    "build:dev-local": "set NEXT_PUBLIC_PROFILE=dev-local&& next build",
+    "build:dev-be-local": "set NEXT_PUBLIC_PROFILE=dev-be-local&& next build",
+    "build:development": "set NEXT_PUBLIC_PROFILE=development&& next build",
+    "start:docker-dev": "set NEXT_PUBLIC_PROFILE=docker-dev&& next start -p 4001",
+    "start:docker-prod": "set NEXT_PUBLIC_PROFILE=docker-prod&& next start -p 4001",
+    "start:docker-qa": "set NEXT_PUBLIC_PROFILE=docker-qa&& next start -p 4001",
+    "start:dev-local": "set NEXT_PUBLIC_PROFILE=dev-local&& next start -p 4001",
+    "start:dev-be-local": "set NEXT_PUBLIC_PROFILE=dev-be-local&& next start -p 4001",
+    "export": "next export",
+    "lint": "eslint  \"src/**/*.{js,jsx,ts,tsx}\"",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+    "build:icons": "tsc -b ../../packages/template-shared/iconify-bundle && node src/iconify-bundle/bundle-icons-react.js"
+  },
+  "dependencies": {
+    "@types/react": "^17.0.38",
+    "react-quill": "^2.0.0",
+    "template-shared": "*"
+  },
+  "devDependencies": {
+    "tsconfig": "*"
+  }
+}
