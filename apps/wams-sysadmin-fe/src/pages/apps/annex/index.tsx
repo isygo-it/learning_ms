@@ -203,9 +203,9 @@ const AnnexList = () => {
           )}
 
           {editAnnexOpen &&
-          // checkPermission(PermissionApplication.SYSADMIN, PermissionPage.ANNEX, PermissionAction.WRITE) && (
+          checkPermission(PermissionApplication.SYSADMIN, PermissionPage.ANNEX, PermissionAction.WRITE) && (
             <SidebarEditAnnex open={editAnnexOpen} toggle={toggleEditAnnexDrawer} dataParameter={editDataAnnex} uniqueTableCodes={uniqueTableCodes}/>
-          // )
+          )
             }
         </Grid>
       ) : null}
